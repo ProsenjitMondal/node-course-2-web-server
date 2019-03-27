@@ -52,6 +52,12 @@ app.get('/bad', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('pages/projects',{
+        pageTitle: 'Projects Page'
+    });
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
